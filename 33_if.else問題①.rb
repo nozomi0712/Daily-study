@@ -1,24 +1,22 @@
-# 平日でないまたは休日の場合は「True」と返信し、
-# 休日ではない場合は「False」と条件分岐させるメソッドを作りましょう。
+# あなたは警官です。aとｂ二人の容疑者の取り調べをしています。
+# どちらも証言がTrue、またはFalseであればその証言はTrueです。
+# しかしどちらかがFalseでTrueであればその証言はFalse、と出力するメソッドを作りましょう。
 
 # 呼び出し方：
-# sleep_in(weekday, vacation)
+# police_trouble(a, b)
 
 # 出力例：
-# sleep_in(false, false) → False
-# sleep_in(true, false) → False
-# sleep_in(false, true) → True
+# police_trouble(true, false) → False
+# police_trouble(false, false) → True
+# police_trouble(true, true) → True
 
 
-def sleep_in(weekday, vacation)
-  if weekday != true || vacation == true
-    puts "True"
+def police_trouble(a,b)
+  if a && b || !a && !b
+    puts "true"
   else
-    puts "False"
+    puts "false"
   end
 end
 
-weekday = false
-vacation = false
-
-sleep_in(weekday, vacation)
+police_trouble(true, false)
